@@ -27,6 +27,7 @@ url: "https://lvauthrin.github.io/" # the base hostname & protocol for your site
 twitter_username: lvauthrin
 github_username:  lvauthrin
 
+google_tag_manager: G-DHC0YWYJJ3
 
 # Build settings
 theme: jekyll-theme-architect
