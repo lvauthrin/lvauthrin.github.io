@@ -1,0 +1,26 @@
+header h1 {
+  font-size: 4em;
+  padding-bottom: 0.5em;
+}
+
+div.menu {
+  display: table;
+  width: 80%;
+  table-layout: fixed;
+
+  span {
+    display:table-cell;
+    text-align: center;
+    color:white;
+    font-size:2em;
+
+    a {
+      color: white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+  }
+}

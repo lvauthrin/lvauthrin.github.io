@@ -1,0 +1,7 @@
+{
+  "name": "personal-site",
+  "version": "1.0.0",
+  "dependencies": {
+    "firebase-tools": "^11.22.0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "my-website-f4e0d"
+  },
+  "targets": {
+    "my-website-f4e0d": {
+      "hosting": {
+        "lvauthrin": [
+          "lvauthrin"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

@@ -1,0 +1,87 @@
+load("@npm//:firebase-tools/package_json.bzl", firebase_tools_bin = "bin")
+load("@npm//:defs.bzl", "npm_link_all_packages")
+load("//:jekyll.bzl", "jekyll_build")
+
+npm_link_all_packages()
+
+filegroup(
+  name = "jekyll-srcs",
+  srcs = [
+    ".bundle/config",
+    "_config.yml",
+    "Gemfile",
+    "Gemfile.lock",
+  ] + glob([
+    "*.html",
+    "*.markdown",
+    "vendor/**/*",
+    "assets/**/*",
+    "_sass/*.scss", 
+    "_posts/*.markdown",
+    "_layouts/*.html",
+    "_includes/*.html",
+    "_data/*.yml",
+    "_data/*.json"
+  ]),
+)
+
+filegroup(
+  name = "jekyll-output",
+  srcs = glob(["_site/**/*"])
+)
+
+# TODO: Needed: bundle config set --local path 'vendor/bundle'
+jekyll_build(
+  name="build",
+  srcs = [
+    ":jekyll-srcs",
+  ],
+  outputs = [
+    ":jekyll-output",
+  ]
+)
+
+#filegroup(
+#  name = "site",
+#  srcs = ["_site"],
+#)
+
+filegroup(
+  name = "site-files",
+  srcs = glob(["_site/**/*"]),
+#  data = ["site"],
+)
+
+filegroup(
+  name = "firebase-json",
+  srcs = [
+    "firebase.json",
+  ],
+)
+
+filegroup(
+  name = "firebase-configs",
+  srcs = [
+    ".firebaserc",
+  ] + glob([".firebase/*"]),
+)
+
+# TODO: Link the output from above to the firebase cli (i.e. where the files are in the sandbox)
+firebase_tools_bin.firebase_binary(
+    name = "deploy",
+    args = [
+        "-c",
+        "$(rootpath firebase-json)",
+        "--project",
+        "my-website-f4e0d",
+        "deploy",
+        "--only",
+        "hosting:lvauthrin",
+    ],
+    data = [
+      "firebase-json",
+      "firebase-configs",
+      "site-files",
+    ],
+)
+

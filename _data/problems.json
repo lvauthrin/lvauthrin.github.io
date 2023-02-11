@@ -1,0 +1,866 @@
+[
+  {
+    "name": "Find All Numbers Disappeared in an Array",
+    "url": "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/FindAllNumbersDisappearedInAnArray.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "Longest Palindromic Substring",
+    "url": "https://leetcode.com/problems/longest-palindromic-substring",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/LongestPalindromicSubstring.java",
+    "Tags": "Array, Dynamic Programming",
+    "Difficulty": "Medium",
+    "Notes": "2-D DP with each side of the matrix being the word.  i==j means the same character and i+1==j means chars next to each other.  Then expand left (col - 1) and right (row + 1) if value chars(i) == chars(j)."
+  },
+  {
+    "name": "Merge K Sorted Lists",
+    "url": "https://leetcode.com/problems/merge-k-sorted-lists",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/MergeKSortedLists.java",
+    "Tags": "Array, Linked List",
+    "Difficulty": "Hard",
+    "Notes": "Keep track of pointers of each list and update them when min across lists is found.  Other solution, use a heap to stash elements across k lists and iterate the head of the heap adding the head’s next element."
+  },
+  {
+    "name": "Subsets",
+    "url": "https://leetcode.com/problems/subsets",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/Subsets.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": "Start with empty array as solution list, iterate through each number and append to current solution list "
+  },
+  {
+    "name": "Populating Next Right Pointers in Each Node",
+    "url": "https://leetcode.com/problems/populating-next-right-pointers-in-each-node",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/PopulatingNextRightPointersinEachNode.java",
+    "Tags": "",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Binary Tree Preorder Traversal",
+    "url": "https://leetcode.com/problems/binary-tree-preorder-traversal",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/BinaryTreePreorderTraversal.java",
+    "Tags": "Tree",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "Binary Tree Inorder Traversal",
+    "url": "https://leetcode.com/problems/binary-tree-inorder-traversal",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/BinaryTreeInorderTraversal.java",
+    "Tags": "Tree",
+    "Difficulty": "Easy",
+    "Notes": "DFS, Linked List, Tree"
+  },
+  {
+    "name": "  Binary Tree Postorder Traversal",
+    "url": "https://leetcode.com/problems/binary-tree-postorder-traversal",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/BinaryTreePostorderTraversal.java",
+    "Tags": "Tree",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "Binary Tree Level Order Traversal",
+    "url": "https://leetcode.com/problems/binary-tree-level-order-traversal",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/BinaryTreeLevelOrderTraversal.java",
+    "Tags": "Tree",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Maximum Depth of Binary Tree",
+    "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/MaximumDepthofBinaryTree.java",
+    "Tags": "Recursion, Tree",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "SymmetricTree",
+    "url": "https://leetcode.com/problems/symmetric-tree",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/SymmetricTree.java",
+    "Tags": "Recursion, Tree",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "PathSum",
+    "url": "https://leetcode.com/problems/path-sum",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/PathSum.java",
+    "Tags": "Recursion, Tree",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "MoveZeroes",
+    "url": "https://leetcode.com/problems/move-zeroes",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/MoveZeroes.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "ReplaceElementsWithGreatestElementOnRightSide",
+    "url": "https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/ReplaceElementsWithGreatestElementOnRightSide.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "SortArrayByParity",
+    "url": "https://leetcode.com/problems/sort-array-by-parity",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/SortArrayByParity.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "FindNumbersWithEvenNumberOfDigits",
+    "url": "https://leetcode.com/problems/find-numbers-with-even-number-of-digits",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/FindNumbersWithEvenNumberOfDigits.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": "Iterate through numbers.  For each number divide by 10 until answer is zero and that is the number of digits."
+  },
+  {
+    "name": "SquaresOfASortedArray",
+    "url": "https://leetcode.com/problems/squares-of-a-sorted-array",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/SquaresOfASortedArray.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": "Use left and right pointers to find the next max (absolute value) and prepend that to new list."
+  },
+  {
+    "name": "HeightChecker",
+    "url": "https://leetcode.com/problems/height-checker",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/HeightChecker.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "DuplicateZeros",
+    "url": "https://leetcode.com/problems/duplicate-zeros",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/DuplicateZeros.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "MergeSortedArray",
+    "url": "https://leetcode.com/problems/merge-sorted-array",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/MergeSortedArray.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "RemoveElement",
+    "url": "https://leetcode.com/problems/remove-element",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/RemoveElement.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "RemoveDuplicatesFromSortedArray",
+    "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/RemoveDuplicatesFromSortedArray.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "CheckIfNAndItsDoubleExist",
+    "url": "https://leetcode.com/problems/check-if-n-and-its-double-exist",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/CheckIfNAndItsDoubleExist.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "ValidMountainArray",
+    "url": "https://leetcode.com/problems/valid-mountain-array",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/ValidMountainArray.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "01 Matrix",
+    "url": "http://leetcode.com/problems/01-matrix",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/01Matrix.java",
+    "Tags": "Array, BFS, Dynamic Programming",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "3sum",
+    "url": "http://leetcode.com/problems/3sum",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/ThreeSum.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Best Time To Buy And Sell Stock",
+    "url": "http://leetcode.com/problems/best-time-to-buy-and-sell-stock",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/BestTimeBuySellStock.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "Binary Tree Right Side View",
+    "url": "http://leetcode.com/problems/binary-tree-right-side-view",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/BinaryTreeRightSideView.java",
+    "Tags": "Tree",
+    "Difficulty": "Medium",
+    "Notes": "Do a BFS and return the last elements only"
+  },
+  {
+    "name": "Clone Graph",
+    "url": "http://leetcode.com/problems/clone-graph",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/CloneGraph.java",
+    "Tags": "BFS, Graph",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Coin Change",
+    "url": "http://leetcode.com/problems/coin-change",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/CoinChange.java",
+    "Tags": "Array, DFS, Dynamic Programming, Memoization, Recursion",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Combination Sum Ii",
+    "url": "http://leetcode.com/problems/combination-sum-ii",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/CombinationSumIi.java",
+    "Tags": "Backtracking, DFS",
+    "Difficulty": "Medium",
+    "Notes": "Sort the list so you can skip repeated elements and solutions.  Iterate recursively through the list marking your path as you go.  Each step you can either take the current item or ignore it."
+  },
+  {
+    "name": "Course Schedule",
+    "url": "http://leetcode.com/problems/course-schedule",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/CourseSchedule.java",
+    "Tags": "DFS, Memoization, Topological Sort",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Edit Distance",
+    "url": "http://leetcode.com/problems/edit-distance",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/EditDistance.java",
+    "Tags": "Array, DFS, Memoization",
+    "Difficulty": "Hard",
+    "Notes": "Either do a memo DFS with all three options (add, edit, delete) increasing the cost if the current char of each word is different.  Or do a DP starting w/ empty strings and the next vals are the min of all three options."
+  },
+  {
+    "name": "Evaluate Reverse Polish Notation",
+    "url": "http://leetcode.com/problems/evaluate-reverse-polish-notation",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/EvaluateReversePolishNotation.java",
+    "Tags": "Array, Stack",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Find All Anagrams In A String",
+    "url": "http://leetcode.com/problems/find-all-anagrams-in-a-string",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/FindAllAnagramsInAString.java",
+    "Tags": "Array, String",
+    "Difficulty": "Medium",
+    "Notes": "Use two pointers and keep track of counts of characters to see if matches expected count."
+  },
+  {
+    "name": "Find Median From Data Stream",
+    "url": "http://leetcode.com/problems/find-median-from-data-stream",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/FindMedianOfStreams.java",
+    "Tags": "Heap",
+    "Difficulty": "Hard",
+    "Notes": "Keep a min and max heap.  The head element of min heap is the max of the mins and vice versa."
+  },
+  {
+    "name": "Find Pivot Index",
+    "url": "http://leetcode.com/problems/find-pivot-index",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/FindPivotIndex.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "Generate Parentheses",
+    "url": "http://leetcode.com/problems/generate-parentheses",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/GenerateParentheses.java",
+    "Tags": "DFS, Dynamic Programming",
+    "Difficulty": "Medium",
+    "Notes": "Either do DFS and choose to add an open paren when you can create more pairs (inclusive) or close parens when there are more open parens.  Or use DP keeping track of open/close parens per solution."
+  },
+  {
+    "name": "Implement Trie Prefix Tree",
+    "url": "http://leetcode.com/problems/implement-trie-prefix-tree",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/ImplementTriePrefixTree.java",
+    "Tags": "Recursion, Trie",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Insert Interval",
+    "url": "http://leetcode.com/problems/insert-interval",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/InsertInterval.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Is Subsequence",
+    "url": "http://leetcode.com/problems/is-subsequence",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/IsSubsequence.java",
+    "Tags": "Array, Backtracking, Dynamic Programming, Greedy, Recursion",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "Isomorphic Strings",
+    "url": "http://leetcode.com/problems/isomorphic-strings",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/IsomorphicStrings.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "K Closest Points To Origin",
+    "url": "http://leetcode.com/problems/k-closest-points-to-origin",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/KClosestPointsToOrigin.java",
+    "Tags": "Heap",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Linked List Cycle Ii",
+    "url": "http://leetcode.com/problems/linked-list-cycle-ii",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/LinkedListCycleIi.java",
+    "Tags": "Linked List",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Longest Palindrome",
+    "url": "http://leetcode.com/problems/longest-palindrome",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/LongestPalindrome.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "Longest Substring Without Repeating Characters ",
+    "url": "http://leetcode.com/problems/longest-substring-without-repeating-characters ",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/LongestSubstringWithoutRepeatingCharacters.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Lowest Common Ancestor Of A Binary Tree",
+    "url": "http://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/LowestCommonAncestorOfABinaryTree.java",
+    "Tags": "DFS",
+    "Difficulty": "Medium",
+    "Notes": "Go through tree twice and find ancestor list.  Then compare ancestor list.  Alternatively, recurse and track solution in a global when right and left are both set to 1."
+  },
+  {
+    "name": "Max Consecutive Ones",
+    "url": "http://leetcode.com/problems/max-consecutive-ones",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/MaxConsecutiveOnes.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": "Iterate through array counting ones and updating max.  Reset on zero."
+  },
+  {
+    "name": "Maximum Product Of Two Elements In An Array",
+    "url": "http://leetcode.com/problems/maximum-product-of-two-elements-in-an-array",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/MaximumProductOfTwoElementsInAnArray.java",
+    "Tags": "Array, Heap",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "Maximum Profit In Job Scheduling",
+    "url": "http://leetcode.com/problems/maximum-profit-in-job-scheduling",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/MaximumProfitInJobScheduling.java",
+    "Tags": "Array, DFS, Memoization, TreeMap",
+    "Difficulty": "Hard",
+    "Notes": "Either do DFS w/ memo of job position and choose next or current.  After current, select next by doing Binary Search.  Or iterate through jobs and store end time in Treemap.  Find previous sum using floor key using start time."
+  },
+  {
+    "name": "Maximum Subarray",
+    "url": "http://leetcode.com/problems/maximum-subarray",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/MaximumSubarray.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Merge Intervals",
+    "url": "http://leetcode.com/problems/merge-intervals",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/MergeIntervals.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": "Sort original list.  Pointer to both list.  Move pointer to both list when not merging otherwise merge and move pointer to src list."
+  },
+  {
+    "name": "Merge Two Sorted Lists",
+    "url": "http://leetcode.com/problems/merge-two-sorted-lists",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/MergeTwoSortedLists.java",
+    "Tags": "Linked List",
+    "Difficulty": "Easy",
+    "Notes": "Create dummy head and min pointer.  Loop until lists are empty and on each iteration add smaller value as min.next.  Then increment pointers"
+  },
+  {
+    "name": "Middle Of The Linked List",
+    "url": "http://leetcode.com/problems/middle-of-the-linked-list",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/MiddleOfTheLinkedList.java",
+    "Tags": "Linked List",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "Min Stack",
+    "url": "http://leetcode.com/problems/min-stack",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/MinStack.java",
+    "Tags": "Stack",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "N Ary Tree Preorder Traversal",
+    "url": "http://leetcode.com/problems/n-ary-tree-preorder-traversal",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/NAryTreePreorderTraversal.java",
+    "Tags": "Recursion, Tree",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "Number Of 1 Bits",
+    "url": "http://leetcode.com/problems/number-of-1-bits",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/NumberOf1Bits.java",
+    "Tags": "Bit Manipulation",
+    "Difficulty": "Easy",
+    "Notes": "And first bit with one and if set increment counter.  Shift number or mask."
+  },
+  {
+    "name": "Number Of Islands",
+    "url": "http://leetcode.com/problems/number-of-islands",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/NumberOfIslands.java",
+    "Tags": "Backtracking, DFS",
+    "Difficulty": "Medium",
+    "Notes": "Iterate through matrix find islands and iterate through neighbors marking elements and increment for each island"
+  },
+  {
+    "name": "Permutations",
+    "url": "http://leetcode.com/problems/permutations",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/Permutations.java",
+    "Tags": "Backtracking, DFS",
+    "Difficulty": "Medium",
+    "Notes": "Iterate through loop and track items selected and items seen.  Then recursively go through same loop and skipping seen.  Alternative, you can swap items."
+  },
+  {
+    "name": "Print Foobar Alternately",
+    "url": "http://leetcode.com/problems/print-foobar-alternately",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/PrintFoobarAlternately.java",
+    "Tags": "Multithreading",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Print In Order",
+    "url": "http://leetcode.com/problems/print-in-order",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/PrintInOrder.java",
+    "Tags": "Multithreading",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "Reverse Linked List II",
+    "url": "http://leetcode.com/problems/reverse-linked-list-ii",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/ReverseLinkedListII.java",
+    "Tags": "Linked List",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Reverse Linked List",
+    "url": "http://leetcode.com/problems/reverse-linked-list",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/ReverseLinkedList.java",
+    "Tags": "Linked List",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "Rotting Oranges",
+    "url": "http://leetcode.com/problems/rotting-oranges",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/RottingOranges.java",
+    "Tags": "BFS",
+    "Difficulty": "Medium",
+    "Notes": "Queue rotten oranges.  Do BFS and mark oranges as visited while keeping track of level.  Also track set/count of fresh oranges to see if they can all turn rotten."
+  },
+  {
+    "name": "Running Sum Of 1d Array",
+    "url": "http://leetcode.com/problems/running-sum-of-1d-array",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/RunningSumOf1dArray.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "Search In Rotated Sorted Array",
+    "url": "http://leetcode.com/problems/search-in-rotated-sorted-array",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/SearchInRotatedSortedArray.java",
+    "Tags": "Array, Binary Search",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Serialize And Deserialize Binary Tree",
+    "url": "http://leetcode.com/problems/serialize-and-deserialize-binary-tree",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/SerializeAndDeserializeBinaryTree.java",
+    "Tags": "DFS, Tree",
+    "Difficulty": "Hard",
+    "Notes": "Use preorder DFS to write out the data and preorder DFS to read the data."
+  },
+  {
+    "name": "Single Number",
+    "url": "http://leetcode.com/problems/single-number",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/SingleNumber.java",
+    "Tags": "Bit Manipulation",
+    "Difficulty": "Easy",
+    "Notes": "Xor all of the numbers together"
+  },
+  {
+    "name": "Sort Colors",
+    "url": "http://leetcode.com/problems/sort-colors",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/SortColors.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Spiral Matrix",
+    "url": "http://leetcode.com/problems/spiral-matrix",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/SpiralMatrix.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": "Iterate through each direction incrementing start and end after each direction."
+  },
+  {
+    "name": "Spiral Matrix Ii",
+    "url": "http://leetcode.com/problems/spiral-matrix-ii",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/SpiralMatrixIi.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": "Similar to first problem except increment a counter and store the value.  Loop and conditions are same."
+  },
+  {
+    "name": "String To Integer Atoi",
+    "url": "http://leetcode.com/problems/string-to-integer-atoi",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/StringToIntegerAtoi.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": "Use states to simplify logic.  Keep track of sign and total.  Make sure you don’t exceed caps."
+  },
+  {
+    "name": "Subsets Ii",
+    "url": "http://leetcode.com/problems/subsets-ii",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/SubsetsIi.java",
+    "Tags": "Array, Bit Manipulation, DFS",
+    "Difficulty": "Medium",
+    "Notes": "Either use a DFS with backtracking or tracking elements using a set to get rid of dupes or generate all possible bit masks and only add unseen combinations."
+  },
+  {
+    "name": "Third Maximum Number",
+    "url": "http://leetcode.com/problems/third-maximum-number",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/ThirdMaximumNumber.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "Time Based Key Value Store",
+    "url": "http://leetcode.com/problems/time-based-key-value-store",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/TimeBasedKeyValueStore.java",
+    "Tags": "TreeMap",
+    "Difficulty": "Medium",
+    "Notes": "Use a hashmap using the key and a treemap using the timestamp as a key and value as the value.  Null checks"
+  },
+  {
+    "name": "Trapping Rain Water",
+    "url": "http://leetcode.com/problems/trapping-rain-water",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/TrappingRainWater.java",
+    "Tags": "Array, Dynamic Programming",
+    "Difficulty": "Hard",
+    "Notes": "At each position, the water contained there is min(left max, right max) - h.  Accumulate the heights."
+  },
+  {
+    "name": "Unique Paths",
+    "url": "http://leetcode.com/problems/unique-paths",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/UniquePaths.java",
+    "Tags": "Dynamic Programming",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Valid Parentheses",
+    "url": "http://leetcode.com/problems/valid-parentheses",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/ValidParentheses.java",
+    "Tags": "Stack",
+    "Difficulty": "Easy",
+    "Notes": ""
+  },
+  {
+    "name": "Validate Binary Search Tree",
+    "url": "http://leetcode.com/problems/validate-binary-search-tree",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/ValidateBinarySearchTree.java",
+    "Tags": "DFS, Recursion, Tree",
+    "Difficulty": "Medium",
+    "Notes": "Recurse through tree with range (min, max) checking if node value is in that range."
+  },
+  {
+    "name": "Wildcard Matching",
+    "url": "http://leetcode.com/problems/wildcard-matching",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/WildcardMatching.java",
+    "Tags": "DFS, Dynamic Programming, Memoization",
+    "Difficulty": "Hard",
+    "Notes": "2D DP table: (1) char matches or ‘?’ then T if previous matches (2) if ‘*’ and char matched in row then T.  Recursive with memo also. "
+  },
+  {
+    "name": "Word Break",
+    "url": "http://leetcode.com/problems/word-break",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/WordBreak.java",
+    "Tags": "Backtracking, Memoization, Recursion",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Word Ladder",
+    "url": "http://leetcode.com/problems/word-ladder",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/WordLadder.java",
+    "Tags": "BFS",
+    "Difficulty": "Hard",
+    "Notes": ""
+  },
+  {
+    "name": "Word Search",
+    "url": "http://leetcode.com/problems/word-search",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/WordSearch.java",
+    "Tags": "Backtracking, DFS",
+    "Difficulty": "Medium",
+    "Notes": "Iterate through each slot in the matrix.  If the slot matches the next char in the word, mark it and explore the neighbors.  If there’s no match, backtrack and unmark."
+  },
+  {
+    "name": "Kth Largest Element In Array",
+    "url": "https://leetcode.com/problems/kth-largest-element-in-an-array",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/KthLargestInStream.java",
+    "Tags": "Heap",
+    "Difficulty": "Medium",
+    "Notes": "Store items in min heap and remove smallest elements if size exceeds k"
+  },
+  {
+    "name": "Kth Largest Element In A Stream",
+    "url": "http://leetcode.com/problems/kth-largest-element-in-a-stream",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/KthLargestInStream.java",
+    "Tags": "Array, Prefix Sum",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Design Twitter",
+    "url": "https://leetcode.com/problems/design-twitter",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/DesignTwitter.java",
+    "Tags": "Heap",
+    "Difficulty": "Medium",
+    "Notes": ""
+  },
+  {
+    "name": "Find All Disappared Numbers",
+    "url": "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/FindAllDisappearedNumbers.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": "First solution is to keep hash/array of all 'seen' and iterate from 1:n to find missing.  Other constant space solution is to swap element positions then iterate from 1:n to find missing."
+  },
+  {
+    "name": "Task Scheduler",
+    "url": "https://leetcode.com/problems/task-scheduler",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/TaskScheduler.java",
+    "Tags": "Heap",
+    "Difficulty": "Medium",
+    "Notes": "Calculate frequencies, put in a heap.  Schedule frequencies into queue and only reschedule when removing from queue.  Insert dummy elements for idle times."
+  },
+  {
+    "name": "Last Stone Weight",
+    "url": "https://leetcode.com/problems/last-stone-weight",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/LastStoneWeight.java",
+    "Tags": "Heap",
+    "Difficulty": "Easy",
+    "Notes": "Put elements in max heap and 'smash' top two elements until only one is left"
+  },
+  {
+    "name": "Min Cost Climbing Stairs",
+    "url": "https://leetcode.com/problems/min-cost-climbing-stairs",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/MinCostClimbingStairs.java",
+    "Tags": "Dynamic Programming",
+    "Difficulty": "Easy",
+    "Notes": "c(i) = min(c(i-1) + cumcost(i-1), c(i-2) + cumcost(i-2)).  Can do with two vars or in-place in array."
+  },
+  {
+    "name": "Climbing Stairs",
+    "url": "https://leetcode.com/problems/climbing-stairs",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/ClimbingStairs.java",
+    "Tags": "Dynamic Programming",
+    "Difficulty": "Easy",
+    "Notes": "w(i) = w(i-1) + w(i-2).  Can do with two vars or in-place in array."
+  },
+  {
+    "name": "House Robber",
+    "url": "https://leetcode.com/problems/house-robber",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/HouseRobber.java",
+    "Tags": "Dynamic Programming",
+    "Difficulty": "Medium",
+    "Notes": "w(i) = max(w(i-1), w(i-2) + c(i)).  Can do with two vars or in-place in array."
+  },
+  {
+    "name": "House Robber II",
+    "url": "https://leetcode.com/problems/house-robber-ii",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/HouseRobberII.java",
+    "Tags": "Dynamic Programming",
+    "Difficulty": "Medium",
+    "Notes": "w(i) = max(w(i-1), w(i-2) + c(i)).  Caveat is that you either skip first or last house so do cost 2x w/ those bounds and use vars instead of in-place."
+  },
+  {
+    "name": "Simplify Path",
+    "url": "https://leetcode.com/problems/simplify-path",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/SimplifyPath.java",
+    "Tags": "Stack",
+    "Difficulty": "Medium",
+    "Notes": "Split path by slash, push directories, pop for \"..\", ignore \".\" and empty"
+  },
+  {
+    "name": "Palindromic Substring",
+    "url": "https://leetcode.com/problems/palindromic-substring",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/PalindromicSubstring.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": "For each letter expand from that letter and check if palindrome.  Do the same for even number letter palindrome"
+  },
+  {
+    "name": "Decode Ways",
+    "url": "https://leetcode.com/problems/decode-ways",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/DecodeWays.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": "For each digit, if it's valid then count ways from i - 1 and if two digits valid then count ways from i - 2"
+  }
+]
