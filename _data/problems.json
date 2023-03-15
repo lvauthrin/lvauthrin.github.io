@@ -862,5 +862,320 @@
     "Tags": "Array",
     "Difficulty": "Medium",
     "Notes": "For each digit, if it's valid then count ways from i - 1 and if two digits valid then count ways from i - 2"
+  },
+  {
+    "name": "Longest Increasing Subsequence",
+    "url": "https://leetcode.com/problems/longest-increasing-subsequence",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/LongestIncreasingSubsequence.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": "For each digit, if it's valid then count ways from i - 1 and if two digits valid then count ways from i - 2"
+  },
+  {
+    "name": "Minimum Size Subarray Sum",
+    "url": "https://leetcode.com/problems/minimum-size-subarray-sum",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/MinimumSizeSubarraySum.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": "Two pointer solution keeping track of minimum size that hits target"
+  },
+  {
+    "name": "Implement Queue Using Stacks",
+    "url": "https://leetcode.com/problems/implement-queue-using-stacks",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/ImplementQueueUsingStacks.java",
+    "Tags": "Queue, Stack",
+    "Difficulty": "Easy",
+    "Notes": "Two pointer solution keeping track of minimum size that hits target"
+  },
+  {
+    "name": "Add Two Numbers",
+    "url": "https://leetcode.com/problems/add-two-numbers",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/AddTwoNumbers.java",
+    "Tags": "LinkedList",
+    "Difficulty": "Medium",
+    "Notes": "Go through each node adding up the values and the carry"
+  },
+  {
+    "name": "Same Tree",
+    "url": "https://leetcode.com/problems/same-tree",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/SameTree.java",
+    "Tags": "Tree",
+    "Difficulty": "Easy",
+    "Notes": "Recurse through left, right subtrees.  Base case null checks and vals"
+  },
+  {
+    "name": "Maximum Product Subarray",
+    "url": "https://leetcode.com/problems/maximum-product-subarray",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/MaximumProductSubarray.java",
+    "Tags": "Dynamic Programming",
+    "Difficulty": "Medium",
+    "Notes": "Keep track of min, max as you iterate.  Min/Max is either max * n, min * n, or n"
+  },
+  {
+    "name": "Invert Binary Tree",
+    "url": "https://leetcode.com/problems/invert-binary-tree",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/InvertBinaryTree.java",
+    "Tags": "Tree",
+    "Difficulty": "Easy",
+    "Notes": "Recursively call function and swap left and right nodes.  Base case is just null check."
+  },
+  {
+    "name": "Non-overlapping Intervals",
+    "url": "https://leetcode.com/problems/non-overlapping-intervals",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/NonOverlappingIntervals.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": "Sort array.  Iterate through each checking if the intervals overlap.  Augment counter and left if needed pointer."
+  },
+  {
+    "name": "Meeting Rooms",
+    "url": "https://leetcode.com/problems/meeting-rooms",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/MeetingRooms.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": "Sort array.  Iterate through array and check for overlap, if not overlapping then move to next position"
+  },
+  {
+    "name": "Meeting Rooms II",
+    "url": "https://leetcode.com/problems/meeting-rooms-ii",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/MeetingRoomsII.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": "Keep track of sorted start and end times.  Iterate through both.  When start < end, then inc count otherwise dec count.  Keep track of max"
+  },
+  {
+    "name": "Remove Covered Intervals",
+    "url": "https://leetcode.com/problems/remove-covered-intervals",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/RemoveCoveredIntervals.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": "Sort array by start time, then largest end time.  That allows you to just compare the previous item to see if there's an overlap/remove"
+  },
+  {
+    "name": "Minimum Interval to Include Each Query",
+    "url": "https://leetcode.com/problems/minimum-interval-to-include-each-query",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/MinimumIntervalToIncludeEachQuery.java",
+    "Tags": "Array",
+    "Difficulty": "Hard",
+    "Notes": "Sort intervals and arrays.  Keep track of original query position.  Store min size in heap."
+  },
+  {
+    "name": "Island Perimeter",
+    "url": "https://leetcode.com/problems/island-perimeter",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/IslandPerimeter.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": "Iterate through array, substract each side that's land from 4."
+  },
+  {
+    "name": "Verifying an Alien Dictionary",
+    "url": "https://leetcode.com/problems/verifying-an-alien-dictionary",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/VerifyingAnAlienDictionary.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": "Create an order mapping.  Iterate through each word and compare it to next.  Continue until chars don't match."
+  },
+  {
+    "name": "Max Area of Island",
+    "url": "https://leetcode.com/problems/max-area-of-island",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/MaxAreaOfIsland.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": "Visit all ones and count adjacent ones marking them as complete.  Keep track of max area."
+  },
+  {
+    "name": "Implement Stack Using Queues",
+    "url": "https://leetcode.com/problems/implement-stack-using-queues",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/ImplementStackUsingQueues.java",
+    "Tags": "Stack",
+    "Difficulty": "Easy",
+    "Notes": "Offer elements into queue and poll all others back to the front"
+  },
+  {
+    "name": "Baseball Game",
+    "url": "https://leetcode.com/problems/baseball-game",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/BaseballGame.java",
+    "Tags": "Stack",
+    "Difficulty": "Easy",
+    "Notes": "Offer elements into queue and poll all others back to the front"
+  },
+  {
+    "name": "Asteroid Collision",
+    "url": "https://leetcode.com/problems/asteroid-collision",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/AsteroidCollision.java",
+    "Tags": "Stack",
+    "Difficulty": "Medium",
+    "Notes": "Offer elements until you have negative element.  Then pop off and 'destroy' until no collision"
+  },
+  {
+    "name": "132 Pattern",
+    "url": "https://leetcode.com/problems/132-pattern",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/OneThreeTwoPattern.java",
+    "Tags": "Stack",
+    "Difficulty": "Medium",
+    "Notes": "Keep decreasing array along with current min (excluding current element).  Check terminal condition."
+  },
+  {
+    "name": "Car Fleet",
+    "url": "https://leetcode.com/problems/car-fleet",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/CarFleet.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": "Sort by distance and calculate the time to finish.  Anytime the time to finish is greater than the max time then you have a new fleet"
+  },
+  {
+    "name": "Intersection of Two Arrays",
+    "url": "https://leetcode.com/problems/intersection-of-two-arrays",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/InterSectionOfTwoArrays.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": "Store values in sets and do intersection of sets"
+  },
+  {
+    "name": "Daily Temperatures",
+    "url": "https://leetcode.com/problems/daily-temperatures",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/DailyTemperatures.java",
+    "Tags": "Stack",
+    "Difficulty": "Easy",
+    "Notes": "Store temp and index in decreasing order.  When there's a greater element, pop smaller and insert distance at index."
+  },
+  {
+    "name": "Construct String from Binary Tree",
+    "url": "https://leetcode.com/problems/construct-string-from-binary-tree",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/ConstructStringFromBinaryTree.java",
+    "Tags": "Tree",
+    "Difficulty": "Easy",
+    "Notes": "Iterate in inorder but handle empty left tree case"
+  },
+  {
+    "name": "Valid Perfect Square",
+    "url": "https://leetcode.com/problems/valid-perfect-square",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/ValidPerfectSquare.java",
+    "Tags": "Binary Search",
+    "Difficulty": "Easy",
+    "Notes": "Binary search where you start from 0 to n/2.  Each step you check if the mid^2 == num and readjust if needed"
+  },
+  {
+    "name": "Group Anagrams",
+    "url": "https://leetcode.com/problems/group-anagrams",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/GroupAnagrams.java",
+    "Tags": "Array, Hashmap",
+    "Difficulty": "Medium",
+    "Notes": "For each string, create a map 'key' from the character counts.  The value will be the list of strings that have the same count."
+  },
+  {
+    "name": "Top K Frequent Elements",
+    "url": "https://leetcode.com/problems/top-k-frequent-elements",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/TopKFrequentElements.java",
+    "Tags": "Array, Hashmap",
+    "Difficulty": "Medium",
+    "Notes": "For each string, create a map 'key' from the character counts.  The value will be the list of strings that have the same count."
+  },
+  {
+    "name": "Encode And Decode Strings",
+    "url": "https://leetcode.com/problems/encode-and-decode-strings",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/EncodeAndDecodeStrings.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": "Convert strings into count|string format.  Decode that format."
+  },
+  {
+    "name": "Longest Consecutive Sequence",
+    "url": "https://leetcode.com/problems/longest-consecutive-sequence",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/LongestConsecutiveSequence.java",
+    "Tags": "Array",
+    "Difficulty": "Medium",
+    "Notes": "Create hashmap that will contain number and sequence following that number.  Iterate through numbers and check number + 1"
+  },
+  {
+    "name": "Two Sum",
+    "url": "https://leetcode.com/problems/two-sum",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/TwoSum.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": "Some notes"
+  },
+  {
+    "name": "Contains Duplicate",
+    "url": "https://leetcode.com/problems/contains-duplicate",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/ContainsDuplicate.java",
+    "Tags": "Hashmap",
+    "Difficulty": "Easy",
+    "Notes": "Add all numbers to a set and return true if it's already contained."
+  },
+  {
+    "name": "Happy Number",
+    "url": "https://leetcode.com/problems/happy-number",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/HappyNumber.java",
+    "Tags": "Math",
+    "Difficulty": "Easy",
+    "Notes": "Iterate through numbers and sum squares.  Use set for checking cycles."
+  },
+  {
+    "name": "Move Zeroes",
+    "url": "https://leetcode.com/problems/move-zeroes",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/MoveZeroes.java",
+    "Tags": "Pointers",
+    "Difficulty": "Easy",
+    "Notes": "Iterate read and write pointers.  Swap when there's a zero and read is behind write."
+  },
+  {
+    "name": "Reverse Integer",
+    "url": "https://leetcode.com/problems/reverse-integer",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/ReverseInteger.java",
+    "Tags": "Math",
+    "Difficulty": "Medium",
+    "Notes": "Iterate through numbers multiplying and modding to build backwards. Check overflow."
+  },
+  {
+    "name": "Toeplitz Matrix",
+    "url": "https://leetcode.com/problems/toeplitz-matrix",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/ToeplitzMatrix.java",
+    "Tags": "Array",
+    "Difficulty": "Easy",
+    "Notes": "Iterate through matrix checking if i,j is the same i-1, j-1"
+  },
+  {
+    "name": "Two City Scheduling",
+    "url": "https://leetcode.com/problems/two-city-scheduling",
+    "Solved": "Yes",
+    "code": "https://github.com/lvauthrin/leetcode/blob/main/java/src/main/java/TwoCityScheduling.java",
+    "Tags": "Greedy",
+    "Difficulty": "Medium",
+    "Notes": "Sort by cost to travel.  Sum first half taking cost a and second half taking cost b."
   }
 ]
