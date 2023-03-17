@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# This script is used to add a json object to the problems.json file.
+# This could be changed to jsonl format (json objects on each line) instead to make it easier
+
 createJson() {
   name=$1
   difficulty=$2

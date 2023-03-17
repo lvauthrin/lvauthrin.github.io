@@ -4,7 +4,7 @@ title:  "Flutter Devices"
 author: "Laurent Vauthrin"
 date:   2023-02-04 20:26:54 -0500
 categories: ["tech"]
-tags: ["flutter"]
+tags: ["vim", "flutter"]
 ---
 
 In a previous post, I went through the steps of getting setup to use Flutter in LazyVim.  By default, Flutter will be limited to building for web only.  In order to setup other devices (e.g. Android or Mac) I had to go through a few more steps.

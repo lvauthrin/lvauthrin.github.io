@@ -4,7 +4,7 @@
   },
   "hosting": {
     "target": "lvauthrin",
-    "public": "_site",
+    "public": "site/_site",
     "ignore": [
       "firebase.json",
       "**/.*",

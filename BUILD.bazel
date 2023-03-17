@@ -4,24 +4,34 @@ load("//:jekyll.bzl", "jekyll_build")
 
 npm_link_all_packages()
 
+#filegroup(
+#  name = "jekyll-script",
+#  srcs = ["scripts/bundle.sh"],
+#)
+
 filegroup(
   name = "jekyll-srcs",
   srcs = [
-    ".bundle/config",
-    "_config.yml",
-    "Gemfile",
-    "Gemfile.lock",
+    "site/.bundle/config",
+    "site/_config.yml",
+    "site/Gemfile",
+    "site/Gemfile.lock",
   ] + glob([
-    "*.html",
-    "*.markdown",
-    "vendor/**/*",
-    "assets/**/*",
-    "_sass/*.scss", 
-    "_posts/*.markdown",
-    "_layouts/*.html",
-    "_includes/*.html",
-    "_data/*.yml",
-    "_data/*.json"
+    "site/*.html",
+    "site/*.markdown",
+    "site/vendor/**/*",
+    "site/assets/**/*",
+    "site/_sass/*.scss", 
+    "site/_posts/*.markdown",
+    "site/_layouts/*.html",
+    "site/_includes/*.html",
+    "site/_data/*.yml",
+    "site/_data/*.json",
+  ],
+  exclude = [
+    "site/vendor/**/*.md",
+    "site/vendor/bundle/ruby/3.1.0/gems/jekyll-3.9.3/lib/site_template/_posts/0000-00-00-welcome-to-jekyll.markdown.erb*"
+    #"site/vendor/**/*.erb",
   ]),
 )
 
@@ -30,25 +40,28 @@ filegroup(
   srcs = glob(["_site/**/*"])
 )
 
+# TODO: This doesn't have access to the site directory
+sh_binary(
+    name = "j-serve",
+    srcs = ["scripts/bundle.sh"],
+    args = ["site", "exec", "jekyll", "serve"],
+    data = [":jekyll-srcs"],
+)
+
 # TODO: Needed: bundle config set --local path 'vendor/bundle'
 jekyll_build(
-  name="build",
+  name="serve",
   srcs = [
     ":jekyll-srcs",
   ],
   outputs = [
     ":jekyll-output",
-  ]
+  ],
 )
-
-#filegroup(
-#  name = "site",
-#  srcs = ["_site"],
-#)
 
 filegroup(
   name = "site-files",
-  srcs = glob(["_site/**/*"]),
+  srcs = glob(["site/_site/**/*"]),
 #  data = ["site"],
 )
 

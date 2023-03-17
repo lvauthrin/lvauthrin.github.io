@@ -29,16 +29,16 @@ github_username:  lvauthrin
 google_tag_manager: "G-DHC0YWYJJ3"
 
 theme_config:
-  appearance: "light" # can be "light", "dark" or "auto"
-  appearance_toggle: false # if appearance can be switched by user
-  back_home_text: "home.." # customize text for homepage link in post layout
+  appearance: "auto" # can be "light", "dark" or "auto"
+  appearance_toggle: true # if appearance can be switched by user
+  back_home_text: "⬅️  Home" # customize text for homepage link in post layout
   date_format: "%Y-%m-%d" # customize how date is formatted
-  show_description: false # show blog description
   show_navbar: true # show horizontal navbar
+  show_description: false # show blog description
   show_footer: true # show footer links in home page,add in _data/home.yml
   show_copyright: true # show copyright notice in footer
   # following keys are using to create home layout
-  show_projects: true # show projects as cards, add in _data/home.yml
+  show_projects: false # show projects as cards, add in _data/home.yml
   show_blog: true # show blog posts added in _posts
   show_old_projects: false # show old projects as cards, add in _data/home.yml
   show_misc_list: false # show generic vertical list for misc details, add _data/home.yml
@@ -46,8 +46,8 @@ theme_config:
   show_tags: true # show tags in a blog posts
   # options for "home" page
   home:
-    title_projects: Projects
-    title_misc_list: Details
+    title_projects: Interview Prep
+    title_misc_list: Resources
     title_blog: Blog
 
 # Build settings
@@ -59,19 +59,19 @@ plugins:
   - jekyll-feed
 
 exclude:
-  - README.md
+  #  - README.md
   - Gemfile
   - Gemfile.lock
   - vendor/
-  - WORKSPACE
-  - BUILD.bazel
-  - jekyll.bzl
-  - bazel-bin/
-  - bazel-out/
-  - bazel-testlogs/
-  - bazel-lvauthrin.github.io/
-  - pnpm-lock.yaml
-  - package.json
-  - node_modules/
-  - database.rules.json
-  - firebase.json
+  #  - WORKSPACE
+  #  - BUILD.bazel
+  #  - jekyll.bzl
+  #  - bazel-bin/
+  #  - bazel-out/
+  #  - bazel-testlogs/
+  #  - bazel-lvauthrin.github.io/
+  #  - pnpm-lock.yaml
+  #  - package.json
+  #  - node_modules/
+  #  - database.rules.json
+  #  - firebase.json

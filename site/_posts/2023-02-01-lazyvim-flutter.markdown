@@ -3,9 +3,14 @@ layout: post
 title:  "Flutter in LazyVim"
 author: "Laurent Vauthrin"
 date:   2023-02-01 20:26:54 -0500
-# TODO: What are tags and categories?
 categories: ["tech"]
 tags: ["vim","flutter"]
+---
+
+---
+
+**Update (3/16/23):** These setup instructions caused two LSP clients to start per buffer.  It turns out that flutter-tools already includes the dart LSP so I've updated the instructions.
+
 ---
 
 I've always enjoyed working in Vim because of how lightweight it feels compared to other IDEs despite the extra learning curve and overhead in configuring it.  I've recently tried [LazyVim](https://www.lazyvim.org/) and really liked the look, feel, and ease of use.  I've also recently been interested in learning [Flutter](https://flutter.dev) to quickly prototype mobile apps.  Getting Flutter and LazyVim working together took a bit of learning so I thought I'd share it here.
@@ -40,18 +45,21 @@ To configure Dart syntax Highlighting, you can use [TreeSitter](https://tree-sit
 ```
 
 ### Dart LSP
-[Language Server Protocols](https://microsoft.github.io/language-server-protocol/) or LSP allows editors and IDEs to have development features like auto complete, go to definition, etc without having to build it specifically for that editor.  NeoVim and LazyVim come with a [built-in lsp client](https://neovim.io/doc/user/lsp.html) and LazyVim comes with [lsp client configs](https://github.com/neovim/nvim-lspconfig) for a wide variety of languages.  LazyVim also comes with support for installing lsp servers automatically when a client is configured.  This management of lsp servers is handled by [Mason](https://github.com/williamboman/mason.nvim) and [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim).  However, since the Dart SDK [already comes with an lsp server](https://github.com/dart-lang/sdk/tree/master/pkg/analysis_server/tool/lsp_spec) and we already installed that, we just need to configure the client by adding it to the LazyVim configuration.  I did this by creating new plugin config file (`~/.config/nvim/lua/plugins/flutter.lua`) with the following contents:
+**Update:** This isn't needed because nvim-tools already setups up Dart LSP.
+
+~~[Language Server Protocols](https://microsoft.github.io/language-server-protocol/) or LSP allows editors and IDEs to have development features like auto complete, go to definition, etc without having to build it specifically for that editor.  NeoVim and LazyVim come with a [built-in lsp client](https://neovim.io/doc/user/lsp.html) and LazyVim comes with [lsp client configs](https://github.com/neovim/nvim-lspconfig) for a wide variety of languages.  LazyVim also comes with support for installing lsp servers automatically when a client is configured.  This management of lsp servers is handled by [Mason](https://github.com/williamboman/mason.nvim) and [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim).  However, since the Dart SDK [already comes with an lsp server](https://github.com/dart-lang/sdk/tree/master/pkg/analysis_server/tool/lsp_spec) and we already installed that, we just need to configure the client by adding it to the LazyVim configuration.  I did this by creating new plugin config file (`~/.config/nvim/lua/plugins/flutter.lua`) with the following contents:~~
 ```lua
-return {
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        dartls = {},
-      },
-    },
-  },
-}
+# DON'T INCLUDE THIS!  nvim-tools below already takes care of Dart LSP.
+# return {
+#   {
+#     "neovim/nvim-lspconfig",
+#     opts = {
+#       servers = {
+#         dartls = {},
+#       },
+#     },
+#   },
+# }
 ```
 
 ### Flutter Commands

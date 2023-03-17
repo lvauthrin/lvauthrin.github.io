@@ -1,0 +1,13 @@
+project_entries:
+  - title: Coding
+    url: /code
+    desc: Resources for coding interviews
+  - title: System Design
+    url: /system-design
+    desc: Resources for system design interviews
+
+misc_entries:
+  - title: System Design
+    url: /system-design
+  - title: Coding
+    url: /coding
