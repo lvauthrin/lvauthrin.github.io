@@ -17,19 +17,26 @@ I also needed to ignore the `node_modules` directory:
 ```bash
 echo "node_modules" > .bazelignore
 ```
-I couldn't get Jekyll to work with symlinks which is what Bazel prefers.  I believe the Bazel site is actually using Jekyll though and it seems like they have it working 🤔.
 
-# Building site
+For bundle, I needed to configure packages to be installed in the workspace:
 ```bash
-.script/bundle.sh exec jekyll build
+bundle config set --local path 'vendor/bundle'
+```
+
+# Building the site locally
+```bash
+bazel run build
 ```
 
 # Serving the site locally
 ```bash
-./script/serve.sh 
+bazel run serve
 ```
 
 # Deploying
-```
+```bash
 bazel run deploy
 ```
+
+# TODO
+* Use the ruby/bundle external rules to make this build hermetic

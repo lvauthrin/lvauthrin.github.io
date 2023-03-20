@@ -1,90 +1,135 @@
 load("@npm//:firebase-tools/package_json.bzl", firebase_tools_bin = "bin")
 load("@npm//:defs.bzl", "npm_link_all_packages")
-load("//:jekyll.bzl", "jekyll_build")
-
-npm_link_all_packages()
-
-#filegroup(
-#  name = "jekyll-script",
-#  srcs = ["scripts/bundle.sh"],
-#)
+# TODO: I initally created a rule to handle the jekyll build but that seems more complicated than necessary
+#load("//:jekyll.bzl", "jekyll_build")
 
 filegroup(
-  name = "jekyll-srcs",
+  name = "bundle-files",
   srcs = [
-    "site/.bundle/config",
-    "site/_config.yml",
-    "site/Gemfile",
-    "site/Gemfile.lock",
+    ".bundle/config",
+    "Gemfile",
+    "Gemfile.lock",
   ] + glob([
-    "site/*.html",
-    "site/*.markdown",
-    "site/vendor/**/*",
-    "site/assets/**/*",
-    "site/_sass/*.scss", 
-    "site/_posts/*.markdown",
-    "site/_layouts/*.html",
-    "site/_includes/*.html",
-    "site/_data/*.yml",
-    "site/_data/*.json",
+    "vendor/**/*",
   ],
   exclude = [
-    "site/vendor/**/*.md",
-    "site/vendor/bundle/ruby/3.1.0/gems/jekyll-3.9.3/lib/site_template/_posts/0000-00-00-welcome-to-jekyll.markdown.erb*"
-    #"site/vendor/**/*.erb",
+    # NOTE: This need to be added because it caused the following error:
+    # ... link or target filename contains space on line 2506: 
+    # 'personal-site/vendor/bundle/ruby/3.1.0/gems/jekyll-redirect-from-0.16.0/spec/fixtures/tags/how we work.md 
+    # /Users/lvauthrin/code/lvauthrin.github.io/vendor/bundle/ruby/3.1.0/gems/jekyll-redirect-from-0.16.0/spec/fixtures/tags/how we work.md'
+    "vendor/bundle/ruby/3.1.0/gems/jekyll-redirect-from-0.16.0/spec/fixtures/tags/how we work.md",
   ]),
 )
 
 filegroup(
-  name = "jekyll-output",
-  srcs = glob(["_site/**/*"])
+  name = "jekyll-srcs",
+  srcs = glob([
+    "site/*",
+    "site/**/*",
+  ]),
 )
 
-# TODO: This doesn't have access to the site directory
+# TODO: For now, the outputs are hardcoded which requires more work when publishing a page
+#       There are two alternatives:
+#       1. Create a tar/zip file as the sole output
+#       2. Use the run_binary rule which allows for directory output
+genrule(
+    name = "build",
+    srcs = [":jekyll-srcs", ":bundle-files"],
+    outs = [
+      "out/404.html",
+      "out/blog.html",
+      "out/code.html",
+      "out/assets/css/customizations.css",
+      "out/index.html",
+      "out/assets/css/main.css",
+      "out/feed.xml",
+      "out/tech/2023/02/01/lazyvim-flutter.html",
+      "out/tech/2023/02/04/flutter-devices.html",
+      "out/tech/2023/03/16/coding-problems.html",
+    ],
+    cmd = """
+# NOTE: Jekyll doesn't support sym links so we copy all files via tar
+mkdir in
+tar cphf - site/* | tar xpf - -C in/
+mv in/site/* in
+
+bundle exec jekyll build -V -s in -d $(@D)/out
+""",
+)
+
+filegroup(
+  name="jekyll-src-dir",
+  srcs=["site"],
+)
+
+# NOTE: We can use the site directory here but it may not recompute the build dependencies correctly since it's not tracking indivdual files like above
 sh_binary(
-    name = "j-serve",
+    name = "serve",
     srcs = ["scripts/bundle.sh"],
-    args = ["site", "exec", "jekyll", "serve"],
-    data = [":jekyll-srcs"],
+    args = [
+      "exec",
+      "jekyll",
+      "serve",
+      "-s",
+      "site",
+      "-d",
+      "out",
+    ],
+    data = [":bundle-files", ":jekyll-src-dir"],
 )
 
-# TODO: Needed: bundle config set --local path 'vendor/bundle'
-jekyll_build(
-  name="serve",
-  srcs = [
-    ":jekyll-srcs",
-  ],
-  outputs = [
-    ":jekyll-output",
-  ],
-)
+# TODO: This wasn't fully working but could be be updated if needed
+#jekyll_build(
+#  name="serve",
+#  srcs = [
+#    ":jekyll-srcs",
+#  ],
+#  outputs = [
+#    ":jekyll-output",
+#  ],
+#)
 
-filegroup(
-  name = "site-files",
-  srcs = glob(["site/_site/**/*"]),
-#  data = ["site"],
-)
-
-filegroup(
-  name = "firebase-json",
-  srcs = [
-    "firebase.json",
-  ],
-)
+# TODO: This is only needed if the config file needs to be templated
+#genrule(
+#    name = "render-firebase-json",
+#    srcs = [":build"],
+#    outs = ["firebase.json"],
+#    cmd = """
+#          cat > $@ << EOF
+#          {
+#            "database": {
+#              "rules": "database.rules.json"
+#            },
+#            "hosting": {
+#              "target": "lvauthrin",
+#              "public": "out",
+#              "ignore": [
+#                "firebase.json",
+#                "**/.*",
+#                "**/node_modules/**"
+#              ]
+#            }
+#          }
+#EOF
+#""",
+#)
 
 filegroup(
   name = "firebase-configs",
   srcs = [
     ".firebaserc",
+    "firebase.json",
   ] + glob([".firebase/*"]),
 )
 
-# TODO: Link the output from above to the firebase cli (i.e. where the files are in the sandbox)
+npm_link_all_packages()
+
 firebase_tools_bin.firebase_binary(
     name = "deploy",
     args = [
         "-c",
-        "$(rootpath firebase-json)",
+        "firebase.json",
         "--project",
         "my-website-f4e0d",
         "deploy",
@@ -92,9 +137,8 @@ firebase_tools_bin.firebase_binary(
         "hosting:lvauthrin",
     ],
     data = [
-      "firebase-json",
-      "firebase-configs",
-      "site-files",
+      ":build",
+      ":firebase-configs",
     ],
 )
 
