@@ -1,3 +1,11 @@
+navbar_entries:
+  - title: LinkedIn
+    url: https://linkedin.com/in/laurent-vauthrin
+  - title: Github
+    url: https://github.com/lvauthrin
+  - title: Twitter
+    url: https://twitter.com/lvauthrin
+
 project_entries:
   - title: Coding
     url: /code
